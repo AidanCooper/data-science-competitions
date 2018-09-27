@@ -8,7 +8,7 @@ Examples of data preparation and predictive modelling for Kaggle competitions co
 Jupyter notebook for the House Prices: Advanced Regression Techniques [Kaggle competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
 
 **Techniques implemented in this notebook:**
-- Processing of target variable and numerical features to give normalised distributions that improve performance of linear models.
+- Feature processing to give normalised distributions for improved linear model performance.
 - Outlier removal from numerical features.
 - Feature engineering and feature selection.
 - Imputation of missing values.
