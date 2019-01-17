@@ -1,11 +1,10 @@
-# Google Cloud AutoML Vision and Microsoft Azure Custom Vision
+# AutoML Image Recognition Models
 
 For this multinomial image classification competition, [Google Cloud AutoML Vision](https://cloud.google.com/vision/) and [Microsoft Azure Custom Vision](https://azure.microsoft.com/en-gb/services/cognitive-services/custom-vision-service/) were used to rapidly produce image recognition models.
 
 Links to implementations:
-
-- [Google Cloud AutoML Vision](Google Cloud AutoML Vision)
-- [Microsoft Azure Custom Vision](Microsoft Azure Custom Vision) 
+- [Google Cloud AutoML Vision](Google_Cloud_AutoML_Vision/)
+- [Microsoft Azure Custom Vision](Microsoft_Azure_Custom_Vision/) 
 
 ## Competition Overview
 
