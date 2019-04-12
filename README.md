@@ -4,15 +4,24 @@ Examples of data preparation and predictive modelling for Kaggle competitions co
 
 ---
 
+## [CareerCon 2019](CareerCon2019/CareerCon2019.ipynb)
+Jupyter notebook for the CareerCon 2019 [Kaggle competition](https://www.kaggle.com/c/career-con-2019).
+
+**Techniques implemented in this report:**
+- Classification of multivariate time series
+- Signal processing and linking of continuous data
+- Exploiting data leakage between test and training sets
+- Random forest classifier, with hyperparameter optimisation via cross validation and grid search.
+
+---
+
 ## [House Prices: Advanced Regression Techniques](HousePricesAdvancedRegression/HousePricesLinearModel.ipynb)
 Jupyter notebook for the House Prices: Advanced Regression Techniques [Kaggle competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
 
 **Techniques implemented in this notebook:**
 - Feature processing to give normalised distributions for improved linear model performance.
 - Outlier removal from numerical features.
-- Feature engineering and feature selection.
-- Imputation of missing values.
-- Categorical feature encoding.
+- Feature engineering and feature selection. Data preprocessing: imputation of missing values; categorical feature encoding.
 - Pipeline for data processing.
 - Lasso regression model, with hyperparameter optimisation via cross validation and grid search.
 
