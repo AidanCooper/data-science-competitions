@@ -1,6 +1,6 @@
-# Kaggle Competition Notebooks
+# Competition Notebooks
 
-Examples of data preparation and predictive modelling for Kaggle competitions covering a range of classification, regression and forecasting tasks for various data types and machine learning techniques.
+Examples of data preparation and predictive modelling for data science competitions on Kaggle/similar covering a range of classification, regression and forecasting tasks for various data types and machine learning techniques.
 
 ---
 
