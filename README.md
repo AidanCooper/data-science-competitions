@@ -27,6 +27,17 @@ Jupyter notebook for the House Prices: Advanced Regression Techniques [Kaggle co
 
 ---
 
+## [Don't Overfit! II](DontOverfit/DontOverfit.ipynb)
+Jupyter notebook for the Don't Overfit! II [Kaggle competition](https://www.kaggle.com/c/dont-overfit-ii).
+
+**Techniques implemented in this notebook:**
+- Adding noise to the small training data set to reduce overfitting.
+- Recursive feature elimination with cross-validation (RFECV).
+- Generating multiple models using 20-fold stratified shuffle split and cross validation, and ensembling those that met a minimum score threshold.
+- Ensembling of lasso, ridge and support vector regression models.
+
+---
+
 ## [Plant Seedlings Classification](PlantSeedlingsClassification)
 Report detailing the use of Google Cloud AutoML Vision to rapidly build a multinomial image recognition model for the Plant Seedlings Classification [Kaggle competition](https://www.kaggle.com/c/plant-seedlings-classification).
 
