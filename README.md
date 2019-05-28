@@ -7,11 +7,20 @@ Examples of data preparation and predictive modelling for data science competiti
 ## [CareerCon 2019](CareerCon2019/CareerCon2019.ipynb)
 Jupyter notebook for the CareerCon 2019 [Kaggle competition](https://www.kaggle.com/c/career-con-2019).
 
-**Techniques implemented in this report:**
+**Techniques implemented in this notebook:**
 - Classification of multivariate time series
 - Signal processing and linking of continuous data
 - Exploiting data leakage between test and training sets
 - Random forest classifier, with hyperparameter optimisation via cross validation and grid search.
+
+---
+
+## [TMDB Box Office Prediction](BoxOfficePrediction/CatBoost-CatBoost_Encoding-Additional_Data.ipynb)
+Jupyter notebook for the TMDB Box Office Prediction [Kaggle competition](https://www.kaggle.com/c/tmdb-box-office-prediction/).
+
+**Techniques implemented:**
+- Gradient Boosted Regression Tree using CatBoost.
+- Multi-label target encoding of categorical data with high-cardinality.
 
 ---
 
