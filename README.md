@@ -47,6 +47,15 @@ Jupyter notebook for the Don't Overfit! II [Kaggle competition](https://www.kagg
 
 ---
 
+## [LANL Earthquake Prediction](EarthquakePrediction/020-model-GBM.ipynb)
+Jupyter notebook for the LANL Earthquake Prediction [Kaggle competition](https://www.kaggle.com/c/LANL-Earthquake-Prediction/overview).
+
+**Techniques implemented in this notebook:**
+- Feature engineering/signal processing of continuous acoustic measurements.
+- Gradient boosted regression tree models using the CatBoost and LightGBM libraries.
+
+---
+
 ## [Plant Seedlings Classification](PlantSeedlingsClassification)
 Report detailing the use of Google Cloud AutoML Vision to rapidly build a multinomial image recognition model for the Plant Seedlings Classification [Kaggle competition](https://www.kaggle.com/c/plant-seedlings-classification).
 
