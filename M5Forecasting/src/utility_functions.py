@@ -3,12 +3,14 @@ import numpy as np
 import pandas as pd
 
 
-def display(*dfs, head=True):
+def display(*dfs, head: bool = True):
+    """Display the dataframes in _dfs_"""
     for df in dfs:
         IPython.display.display(df.head() if head else df)
 
 
-def reduce_mem_usage(df, verbose=False):
+def reduce_mem_usage(df: pd.DataFrame, verbose: bool = False) -> pd.DataFrame:
+    """Efficiently manage the memory usage of _df_"""
     if verbose:
         start_mem = df.memory_usage().sum() / 1024 ** 2
         print("~> Memory usage of dataframe is {:.3f} MG".format(start_mem))
@@ -69,5 +71,6 @@ def reduce_mem_usage(df, verbose=False):
     return df
 
 
-def extract_num(ser):
+def extract_num(ser: pd.Series) -> pd.Series:
+    """Extract the numerical value from a string"""
     return ser.str.extract(r"(\d+)").astype(np.int16)

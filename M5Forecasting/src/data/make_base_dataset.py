@@ -81,13 +81,13 @@ def reshape_sales(
     return data
 
 
-def merge_calendar(data: pd.Dataframe, calendar: pd.DataFrame) -> pd.DataFrame:
+def merge_calendar(data: pd.DataFrame, calendar: pd.DataFrame) -> pd.DataFrame:
     """Merge _calendar_ into _data_"""
     calendar = calendar.drop(["weekday", "wday", "month", "year"], axis=1)
     return data.merge(calendar, how="left", on="d")
 
 
-def merge_prices(data: pd.Dataframe, prices: pd.DataFrame) -> pd.DataFrame:
+def merge_prices(data: pd.DataFrame, prices: pd.DataFrame) -> pd.DataFrame:
     """Merge _prices_ into _data_"""
     return data.merge(prices, how="left", on=["store_id", "item_id", "wm_yr_wk"])
 
