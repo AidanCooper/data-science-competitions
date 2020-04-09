@@ -8,7 +8,8 @@ from sklearn.preprocessing import LabelEncoder
 from src.utility_functions import display, extract_num, reduce_mem_usage
 
 
-def encode_categorical(df, cols):
+def encode_categorical(df: pd.DataFrame, cols: list):
+    """Encode categorical columns in _cols_ for _df_ whilst maintaining NaN values"""
     for col in cols:
         # Leave NaN as it is.
         le = LabelEncoder()
@@ -18,7 +19,14 @@ def encode_categorical(df, cols):
     return df
 
 
-def reshape_sales(sales, submission, days_pred, d_thresh=0, verbose=True):
+def reshape_sales(
+    sales: pd.DataFrame,
+    submission: pd.DataFrame,
+    days_pred: int,
+    d_thresh: int = 0,
+    verbose: bool = True,
+) -> pd.DataFrame:
+    """Convert from wide to long data format"""
     # melt sales data
     id_columns = ["id", "item_id", "dept_id", "cat_id", "store_id", "state_id"]
     product = sales[id_columns]
@@ -73,16 +81,19 @@ def reshape_sales(sales, submission, days_pred, d_thresh=0, verbose=True):
     return data
 
 
-def merge_calendar(data, calendar):
+def merge_calendar(data: pd.Dataframe, calendar: pd.DataFrame) -> pd.DataFrame:
+    """Merge _calendar_ into _data_"""
     calendar = calendar.drop(["weekday", "wday", "month", "year"], axis=1)
     return data.merge(calendar, how="left", on="d")
 
 
-def merge_prices(data, prices):
+def merge_prices(data: pd.Dataframe, prices: pd.DataFrame) -> pd.DataFrame:
+    """Merge _prices_ into _data_"""
     return data.merge(prices, how="left", on=["store_id", "item_id", "wm_yr_wk"])
 
 
-def make_base_dataset():
+def make_base_dataset() -> pd.DataFrame:
+    """Prepare, save and return base dataset for which features can be engineered"""
     ROOT_DIR = Path(__file__).resolve().parent.parent.parent
     DATA_DIR = ROOT_DIR.joinpath("data/")
 
@@ -135,7 +146,7 @@ def make_base_dataset():
     data.to_csv(f"{DATA_DIR}/interim/base.csv", index=False)
     print("Saved!")
 
-    return
+    return data
 
 
 if __name__ == "__main__":
