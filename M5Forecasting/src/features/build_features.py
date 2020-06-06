@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from src.data import make_base_dataset
+from src.data.make_base_dataset import make_base_dataset
 from src.utility_functions import display, extract_num, reduce_mem_usage
 
 
