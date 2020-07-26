@@ -15,6 +15,16 @@ Jupyter notebook for the CareerCon 2019 [Kaggle competition](https://www.kaggle.
 
 ---
 
+## [M5 Forecasting - Accuracy](M5Forecasting)
+Repository for the M5 Forecasting - Accuracy [Kaggle competition](https://www.kaggle.com/c/m5-forecasting-accuracy)
+
+**Techniques implemented in this repository:**
+- [Script](M5Forecasting/src/data/make_base_dataset.py) for memory-efficient ETL of large time series dataset
+- [Script](M5Forecasting/src/features/build_features.py) for time series feature engineering
+- [Script](M5Forecasting/src/models/train_and_predict_model.py) for training a LightGBM regressor using a cross-validated time series methodology 
+
+---
+
 ## [TMDB Box Office Prediction](BoxOfficePrediction/CatBoost-CatBoost_Encoding-Additional_Data.ipynb)
 Jupyter notebook for the TMDB Box Office Prediction [Kaggle competition](https://www.kaggle.com/c/tmdb-box-office-prediction/).
 
