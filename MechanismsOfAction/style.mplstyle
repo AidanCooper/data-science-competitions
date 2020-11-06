@@ -1,0 +1,13 @@
+figure.figsize : 12, 8
+axes.titlesize : 22
+axes.labelsize : 18
+axes.spines.top : False
+axes.spines.right : False
+axes.linewidth : 1.5
+legend.frameon : False
+legend.fontsize : 12
+lines.linewidth : 2.0
+xtick.labelsize : 14
+ytick.labelsize : 14
+savefig.bbox : tight
+savefig.dpi : 300
