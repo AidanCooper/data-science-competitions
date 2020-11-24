@@ -1,30 +1,37 @@
-# -*- coding: utf-8 -*-
-import click
-import logging
+import pandas as pd
+
 from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
 
 
-@click.command()
-@click.argument('input_filepath', type=click.Path(exists=True))
-@click.argument('output_filepath', type=click.Path())
-def main(input_filepath, output_filepath):
-    """ Runs data processing scripts to turn raw data from (../raw) into
-        cleaned data ready to be analyzed (saved in ../processed).
+def get_base_datasets() -> (pd.DataFrame, pd.DataFrame, pd.DataFrame):
     """
-    logger = logging.getLogger(__name__)
-    logger.info('making final data set from raw data')
+    Returns base datasets with minimal processing.
 
+    - `df`: feature data.
+      - 772 gene expression features and 100 cell viability features. Also:
+        - `cp_type`: indicates whether the experiment is a treatment (contains drug) or 
+        a control (contains no drug - probably DMSO, which has negligible biological 
+        effects).
+        - `cp_dose`: the dose level used in the experiment. Generally, higher dose leads
+        to stronger effect.
+        - `cp_time`: time elapsed between adding the drug and taking the measurement.
+        - `flag`: specifies if row is training (n=23,814) or test (n=3,982) data.
+      - One row = one drug at a specific dose (high/low) and time point (24/48/72 hours)
+      (`sig_id`). 5000 unique drugs in total, with ~6 records each (no column that links
+      the records).
+    - `df_tts`: 206 binary target mechanisms for the 23,814 training drugs.
+    - `df_ttn`: 402 additional unscored targets for the 23,814 training drugs for model 
+    development.
+    """
+    df_trf = pd.read_csv(f"{ROOT_DIR}/data/raw/train_features.csv")
+    df_tef = pd.read_csv(f"{ROOT_DIR}/data/raw/test_features.csv")
+    df_trf["flag"] = "train"
+    df_tef["flag"] = "test"
+    df = pd.concat([df_trf, df_tef], ignore_index=True)
 
-if __name__ == '__main__':
-    log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    logging.basicConfig(level=logging.INFO, format=log_fmt)
+    df_ttn = pd.read_csv(f"{ROOT_DIR}/data/raw/train_targets_nonscored.csv")
+    df_tts = pd.read_csv(f"{ROOT_DIR}/data/raw/train_targets_scored.csv")
 
-    # not used in this stub but often useful for finding various files
-    project_dir = Path(__file__).resolve().parents[2]
-
-    # find .env automagically by walking up directories until it's found, then
-    # load up the .env entries as environment variables
-    load_dotenv(find_dotenv())
-
-    main()
+    return df, df_ttn, df_tts
