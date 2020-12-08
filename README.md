@@ -8,10 +8,20 @@ Examples of data preparation and predictive modelling for data science competiti
 Jupyter notebook for the CareerCon 2019 [Kaggle competition](https://www.kaggle.com/c/career-con-2019).
 
 **Techniques implemented in this notebook:**
-- Classification of multivariate time series
-- Signal processing and linking of continuous data
-- Exploiting data leakage between test and training sets
+- Classification of multivariate time series.
+- Signal processing and linking of continuous data.
+- Exploiting data leakage between test and training sets.
 - Random forest classifier, with hyperparameter optimisation via cross validation and grid search.
+
+---
+
+## [Mechanisms of Action (MoA) Prediction](MechanismsOfAction)
+Repository for the Mechanisms of Action (MoA) Prediction [Kaggle competition](https://www.kaggle.com/c/lish-moa)
+
+**Techniques implemented in this repository:**
+- [Notebook](MechanismsOfAction/notebooks/020_LightGBM_multioutput.ipynb) for implementing scikit-learn's `MultiOutputClassifier` in a cross-validated manner in conjuction with LightGBM. 
+- [Notebook](MechanismsOfAction/notebooks/020_XGBoost_multioutput.ipynb) for implementing scikit-learn's `MultiOutputClassifier` in a cross-validated manner in conjuction with XGBoost. 
+- [Notebook](MechanismsOfAction/notebooks/030_Optuna_LightGBM_hyperparameter_tuning.ipynb) for finding optimal LightGBM hyperparameters across multiple target classes.
 
 ---
 
@@ -19,9 +29,9 @@ Jupyter notebook for the CareerCon 2019 [Kaggle competition](https://www.kaggle.
 Repository for the M5 Forecasting - Accuracy [Kaggle competition](https://www.kaggle.com/c/m5-forecasting-accuracy)
 
 **Techniques implemented in this repository:**
-- [Script](M5Forecasting/src/data/make_base_dataset.py) for memory-efficient ETL of large time series dataset
-- [Script](M5Forecasting/src/features/build_features.py) for time series feature engineering
-- [Script](M5Forecasting/src/models/train_and_predict_model.py) for training a LightGBM regressor using a cross-validated time series methodology 
+- [Script](M5Forecasting/src/data/make_base_dataset.py) for memory-efficient ETL of large time series dataset.
+- [Script](M5Forecasting/src/features/build_features.py) for time series feature engineering.
+- [Script](M5Forecasting/src/models/train_and_predict_model.py) for training a LightGBM regressor using a cross-validated time series methodology.
 
 ---
 
