@@ -22,7 +22,7 @@ ipython-genutils==0.2.0
 ipywidgets @ file:///home/conda/feedstock_root/build_artifacts/ipywidgets_1599554010055/work
 isort @ file:///D:/bld/isort_1599717959802/work
 jedi==0.15.2
-Jinja2==2.11.2
+Jinja2==2.11.3
 joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1593624380152/work
 jsonschema==3.2.0
 jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1598486169312/work
