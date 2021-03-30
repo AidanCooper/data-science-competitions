@@ -54,7 +54,7 @@ Pillow @ file:///D:/bld/pillow_1594213067156/work
 prometheus-client @ file:///home/conda/feedstock_root/build_artifacts/prometheus_client_1590412252446/work
 prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1598885455507/work
 pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
-Pygments==2.6.1
+Pygments==2.7.4
 pylint @ file:///D:/bld/pylint_1598117275892/work
 pyparsing==2.4.7
 PyQt5==5.12.3
